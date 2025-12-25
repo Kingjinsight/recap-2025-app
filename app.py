@@ -120,10 +120,10 @@ questions = [
 
 def generate_letter(answers, api_key):
     prompt = f"""
-    You are a thoughtful, empathetic writer. Based on the following answers from a user reflecting on their year 2025, write a cohesive, warm, and humanistic summary letter addressed to them. If answer contain Chinese, transform them into English.
+    You are a thoughtful, empathetic writer. Based on the following answers from a user reflecting on their year 2025, write a cohesive, warm, and humanistic summary letter addressed to them. If contain English answers, transform them into Chinese.
 
     The letter should:
-    - Be written in English.
+    - Be written in Chinese.
     - Have a calm, reflective, and literary tone.
     - Not use emojis.
     - Synthesize the answers into a narrative flow rather than listing them.
