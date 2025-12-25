@@ -84,6 +84,8 @@ questions = [
     "Which relationship (friend, family, or partner) evolved the most this year?",
     "What is a new habit you formed that you are proud of?",
     "What was the most difficult challenge you faced in your personal life?",
+    "What‘s the best thing you’ve ever bought this year?",
+    "What makes you feel super excited?",
     
     # Study / Work
     "What was the most significant thing you learned this year?",
@@ -104,7 +106,9 @@ questions = [
     "What is something you let go of in 2025?",
     "What are you most grateful for right now?",
     "If you could send a message to yourself from January 1st, 2025, what would it be?",
-    
+    "What is the greatest achievement this year?",
+    "Do you hate someone you didn‘t hate at this time last year?",
+        
     # Future
     "What is your primary word or theme for 2026?",
     "What is one specific fear you want to conquer next year?",
@@ -116,7 +120,7 @@ questions = [
 
 def generate_letter(answers, api_key):
     prompt = f"""
-    You are a thoughtful, empathetic writer. Based on the following answers from a user reflecting on their year 2025, write a cohesive, warm, and humanistic summary letter addressed to them.
+    You are a thoughtful, empathetic writer. Based on the following answers from a user reflecting on their year 2025, write a cohesive, warm, and humanistic summary letter addressed to them. If answer contain Chinese, transform them into English.
 
     The letter should:
     - Be written in English.
