@@ -120,18 +120,22 @@ questions = [
 
 def generate_letter(answers, api_key):
     prompt = f"""
-    You are a thoughtful, empathetic writer. Based on the following answers from a user reflecting on their year 2025, write a cohesive, warm, and humanistic summary letter addressed to them. If contain English answers, transform them into Chinese.
+    你是一位极具共情力、笔触细腻且深邃的文字创作者。请根据用户对 2025 年的回顾回答数据：<{answers}>，为用户撰写一封总结全年的个人书信。
+    核心任务与要求：
+    1. 语言与翻译： 全文使用中文。如果原始答案中包含英文，请将其深层含义优雅地转化为中文，并自然地融入叙述中，不要生硬翻译。
+    2. 语调与风格： 语调需沉静、内敛，富有文学质感。避免空洞的口号，追求一种“老友深夜长谈”的真实感。严禁使用任何表情符号 (Emoji)。
+    3. 叙事逻辑： 严禁以列表或要点形式陈述。你需要将用户关于生活、学业、感悟等碎片化的回答整合为一段流畅的、具有呼吸感的文字叙事，体现出 2025 年这一年的“生命质感”。
+    4. 信件内容：
+        - 捕捉这一年里那些细微但深刻的瞬间。
+        -总结在学业或事业上的沉淀，以及对自我存在的思考。
+        - 在信的末尾，对即将到来的日子寄予一份基于现实的、温柔的期许。
 
-    The letter should:
-    - Be written in Chinese.
-    - Have a calm, reflective, and literary tone.
-    - Not use emojis.
-    - Synthesize the answers into a narrative flow rather than listing them.
-    - Reflect on their life, studies, the 'texture' of their year, and their future hopes.
-    - Be formatted beautifully as a letter (Dear [Name]..., Sincerely, Your 2025 Self).
-    
-    Here are the user's answers:
-    {answers}
+    5. 格式要求：
+        - 严格遵循书信格式：
+        - 抬头：亲爱的 [用户姓名/自己]：
+        - 正文：叙事性段落。
+        - 落款：深爱着你的，2025 年的自己。
+        - 日期：2025年岁末。
     """
     
     try:
